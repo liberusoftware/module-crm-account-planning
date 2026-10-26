@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\AccountPlanning\Models;
 
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Liberu\Foundation\Organizations\Models\Team;
+use App\Traits\IsTenantModel;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
@@ -23,10 +22,7 @@ use Illuminate\Support\Carbon;
  */
 final class AccountPlanningRecord extends Model
 {
-    public function team(): BelongsTo
-    {
-        return $this->belongsTo(Team::class);
-    }
+    use IsTenantModel;
 
     public const KINDS = ['account_hierarchy', 'stakeholder', 'influence_map', 'whitespace', 'account_plan', 'objective', 'risk', 'mutual_action_plan', 'coordination'];
 
