@@ -2,7 +2,7 @@
   "name": "crm-account-planning",
   "display_name": "CRM Account Planning",
   "description": "Account hierarchies, stakeholders, influence maps, whitespace, plans, objectives, risks and mutual action plans",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "category": "capability",
   "provider": "Liberu\\CRM\\AccountPlanning\\AccountPlanningServiceProvider",
   "requires": {
